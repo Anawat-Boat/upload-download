@@ -26,9 +26,9 @@ c:\Users\anawa\Documents\GitHub\upload-download\upload-download\obj\Debug\net8.0
 c:\Users\anawa\Documents\GitHub\upload-download\upload-download\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.upload-download.props
 c:\Users\anawa\Documents\GitHub\upload-download\upload-download\obj\Debug\net8.0\staticwebassets.pack.json
 c:\Users\anawa\Documents\GitHub\upload-download\upload-download\obj\Debug\net8.0\scopedcss\bundle\upload-download.styles.css
-c:\Users\anawa\Documents\GitHub\upload-download\upload-download\obj\Debug\net8.0\upload-download.csproj.CopyComplete
 c:\Users\anawa\Documents\GitHub\upload-download\upload-download\obj\Debug\net8.0\upload-download.dll
 c:\Users\anawa\Documents\GitHub\upload-download\upload-download\obj\Debug\net8.0\refint\upload-download.dll
 c:\Users\anawa\Documents\GitHub\upload-download\upload-download\obj\Debug\net8.0\upload-download.pdb
 c:\Users\anawa\Documents\GitHub\upload-download\upload-download\obj\Debug\net8.0\upload-download.genruntimeconfig.cache
 c:\Users\anawa\Documents\GitHub\upload-download\upload-download\obj\Debug\net8.0\ref\upload-download.dll
+C:\Users\anawa\Documents\GitHub\upload-download\upload-download\obj\Debug\net8.0\upload-d.A97BE05A.Up2Date

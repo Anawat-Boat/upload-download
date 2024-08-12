@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\anawa\\Documents\\GitHub\\upload-download\\upload-download\\upload-download.csproj": {}
+    "C:\\Users\\anawa\\Documents\\GitHub\\upload-download\\upload-download\\upload-download.csproj": {}
   },
   "projects": {
-    "c:\\Users\\anawa\\Documents\\GitHub\\upload-download\\upload-download\\upload-download.csproj": {
+    "C:\\Users\\anawa\\Documents\\GitHub\\upload-download\\upload-download\\upload-download.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\anawa\\Documents\\GitHub\\upload-download\\upload-download\\upload-download.csproj",
+        "projectUniqueName": "C:\\Users\\anawa\\Documents\\GitHub\\upload-download\\upload-download\\upload-download.csproj",
         "projectName": "upload-download",
-        "projectPath": "c:\\Users\\anawa\\Documents\\GitHub\\upload-download\\upload-download\\upload-download.csproj",
+        "projectPath": "C:\\Users\\anawa\\Documents\\GitHub\\upload-download\\upload-download\\upload-download.csproj",
         "packagesPath": "C:\\Users\\anawa\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\anawa\\Documents\\GitHub\\upload-download\\upload-download\\obj\\",
+        "outputPath": "C:\\Users\\anawa\\Documents\\GitHub\\upload-download\\upload-download\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -40,6 +40,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -74,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
