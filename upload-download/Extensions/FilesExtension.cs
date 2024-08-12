@@ -4,7 +4,6 @@ namespace upload_download.Extensions
 {
     public class FilesExtension
     {
-        // Allowed file types
         public static readonly Dictionary<string, string> AllowedFileTypes = new Dictionary<string, string>
         {
             { ".jpg", "image/jpeg" },
@@ -21,17 +20,6 @@ namespace upload_download.Extensions
                 contentType = "application/octet-stream";
             }
             return contentType;
-        }
-
-
-        public static byte[] GetFileContent(string filePath)
-        {
-            if (string.IsNullOrEmpty(filePath) || !File.Exists(filePath))
-            {
-                throw new FileNotFoundException("The requested file was not found.", filePath);
-            }
-
-            return File.ReadAllBytes(filePath);
         }
     }
 }

@@ -19,7 +19,6 @@ namespace upload_download.Controllers
             }
         }
 
-        // Get list of files
         [HttpGet("files")]
         public IActionResult GetFilesAsync()
         {
@@ -34,7 +33,6 @@ namespace upload_download.Controllers
             }
         }
 
-        // Upload a file
         [HttpPost("upload")]
         public async Task<IActionResult> UploadFileAsync(IFormFile file)
         {
@@ -62,7 +60,6 @@ namespace upload_download.Controllers
           
         }
 
-        // Download a file
         [HttpGet("download/{fileName}")]
         public async Task<IActionResult> DownloadFile(string fileName)
         {
@@ -81,5 +78,4 @@ namespace upload_download.Controllers
             return File(memory, contentType, fileName);
         }
     }
-
 }

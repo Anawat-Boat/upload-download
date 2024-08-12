@@ -7,6 +7,7 @@ namespace upload_download.Services
     public class FileService : IFileService
     {
         private readonly string _storagePath = Path.Combine(Directory.GetCurrentDirectory(), "UploadedFiles");
+
         public List<string> GetFiles()
         {
             try
@@ -22,7 +23,6 @@ namespace upload_download.Services
             }
         }
        
-
         public async Task<UploadResponse> UploadFile(IFormFile file)
         {
             try
