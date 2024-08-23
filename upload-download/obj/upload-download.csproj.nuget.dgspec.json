@@ -1,33 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\anawa\\Documents\\GitHub\\upload-download\\upload-download\\upload-download.csproj": {}
+    "/Users/anawatmonprachak/Documents/GitHub/upload-download/upload-download/upload-download.csproj": {}
   },
   "projects": {
-    "C:\\Users\\anawa\\Documents\\GitHub\\upload-download\\upload-download\\upload-download.csproj": {
+    "/Users/anawatmonprachak/Documents/GitHub/upload-download/upload-download/upload-download.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\anawa\\Documents\\GitHub\\upload-download\\upload-download\\upload-download.csproj",
+        "projectUniqueName": "/Users/anawatmonprachak/Documents/GitHub/upload-download/upload-download/upload-download.csproj",
         "projectName": "upload-download",
-        "projectPath": "C:\\Users\\anawa\\Documents\\GitHub\\upload-download\\upload-download\\upload-download.csproj",
-        "packagesPath": "C:\\Users\\anawa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\anawa\\Documents\\GitHub\\upload-download\\upload-download\\obj\\",
+        "projectPath": "/Users/anawatmonprachak/Documents/GitHub/upload-download/upload-download/upload-download.csproj",
+        "packagesPath": "/Users/anawatmonprachak/.nuget/packages/",
+        "outputPath": "/Users/anawatmonprachak/Documents/GitHub/upload-download/upload-download/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\anawa\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/anawatmonprachak/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -51,9 +43,21 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -79,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

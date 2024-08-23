@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using upload_download.Extensions;
 using upload_download.Models;
 using upload_download.Services;
@@ -6,6 +7,7 @@ namespace upload_download.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class FileController : ControllerBase
     {
         private readonly string _storagePath = Path.Combine(Directory.GetCurrentDirectory(), "UploadedFiles");
@@ -53,11 +55,11 @@ namespace upload_download.Controllers
 
                 return Ok(result);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                return StatusCode(500, ex.Message);
             }
-          
+
         }
 
         [HttpGet("download/{fileName}")]
@@ -67,7 +69,7 @@ namespace upload_download.Controllers
 
             if (!System.IO.File.Exists(filePath))
                 return NotFound("File not found.");
-           
+
             var memory = new MemoryStream();
             using (var stream = new FileStream(filePath, FileMode.Open))
             {

@@ -18,7 +18,6 @@ namespace upload_download.Services
             }
             catch (Exception ex)
             {
-              
                 throw new ArgumentException(ex.Message);
             }
         }
