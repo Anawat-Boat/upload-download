@@ -15,7 +15,7 @@ namespace upload_download.Services
             _configuration = configuration;
         }
 
-        public bool SignUp(UserPasswordModel request)
+        public bool SignUp(SignUpModel request)
         {
             try
             {
@@ -27,7 +27,9 @@ namespace upload_download.Services
                 var newUser = new UserModel
                 {
                     UserName = request.UserName,
-                    PasswordHash = BCrypt.Net.BCrypt.HashPassword(request.Password)
+                    PasswordHash = BCrypt.Net.BCrypt.HashPassword(request.Password),
+                    Email = request.Email,
+
                 };
                 _userRepository.AddUser(newUser);
                 return true;

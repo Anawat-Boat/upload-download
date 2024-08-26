@@ -8,6 +8,8 @@ namespace upload_download.Entity
     public class UserModel
     {
         public required string UserName { get; set; }
+        public required string Email { get; set; }
         public required string PasswordHash { get; set; } // Store hashed passwords
+        public bool IsActive { get; set; } = false;
     }
 }

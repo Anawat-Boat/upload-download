@@ -14,7 +14,7 @@ namespace upload_download.Controllers
             _authService = authService;
         }
         [HttpPost("sign-up")]
-        public IActionResult SignUp([FromBody] UserPasswordModel request)
+        public IActionResult SignUp([FromBody] SignUpModel request)
         {
             try
             {

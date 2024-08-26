@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 using upload_download.Extensions;
 using upload_download.Models;
 
@@ -7,12 +8,20 @@ namespace upload_download.Services
     public class FileService : IFileService
     {
         private readonly string _storagePath = Path.Combine(Directory.GetCurrentDirectory(), "UploadedFiles");
-
+        private readonly IMemoryCache _cache;
+        public FileService(IMemoryCache cache)
+        {
+            _cache = cache;
+            if (!Directory.Exists(_storagePath))
+            {
+                Directory.CreateDirectory(_storagePath);
+            }
+        }
         public List<string> GetFiles()
         {
             try
             {
-                return  Directory.GetFiles(_storagePath)
+                return Directory.GetFiles(_storagePath)
                                  .Select(Path.GetFileName)
                                  .ToList();
             }
@@ -21,7 +30,7 @@ namespace upload_download.Services
                 throw new ArgumentException(ex.Message);
             }
         }
-       
+
         public async Task<UploadResponse> UploadFile(IFormFile file)
         {
             try
@@ -35,7 +44,7 @@ namespace upload_download.Services
             }
             catch (Exception ex)
             {
-                throw new ArgumentException(ex.Message); 
+                throw new ArgumentException(ex.Message);
             }
         }
 
