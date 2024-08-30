@@ -22,11 +22,11 @@ namespace upload_download.Controllers
         }
 
         [HttpGet("files")]
-        public IActionResult GetFilesAsync()
+        public async Task<IActionResult> GetFiles()
         {
             try
             {
-                List<string> files = _fileService.GetFiles();
+                List<string> files = await _fileService.GetFiles();
                 return Ok(files);
             }
             catch (Exception ex)
@@ -36,7 +36,7 @@ namespace upload_download.Controllers
         }
 
         [HttpPost("upload")]
-        public async Task<IActionResult> UploadFileAsync(IFormFile file)
+        public async Task<IActionResult> UploadFile(IFormFile file)
         {
             try
             {
@@ -52,14 +52,12 @@ namespace upload_download.Controllers
                     return BadRequest("File content type does not match the file extension.");
 
                 UploadResponse result = await _fileService.UploadFile(file);
-
                 return Ok(result);
             }
             catch (Exception ex)
             {
                 return StatusCode(500, ex.Message);
             }
-
         }
 
         [HttpGet("download/{fileName}")]

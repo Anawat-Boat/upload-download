@@ -14,11 +14,12 @@ namespace upload_download.Controllers
             _authService = authService;
         }
         [HttpPost("sign-up")]
-        public IActionResult SignUp([FromBody] SignUpModel request)
+        public async Task<IActionResult> SignUp([FromBody] EmailPasswordModel request)
         {
             try
             {
-                bool result = _authService.SignUp(request);
+
+                bool result = await _authService.SignUp(request);
                 return Ok(result);
             }
             catch (Exception ex)
@@ -28,11 +29,11 @@ namespace upload_download.Controllers
         }
 
         [HttpPost("sign-in")]
-        public IActionResult SignIn([FromBody] UserPasswordModel request)
+        public async Task<IActionResult> SignIn([FromBody] EmailPasswordModel request)
         {
             try
             {
-                string token = _authService.SignIn(request);
+                string token = await _authService.SignIn(request);
                 return Ok(new { token });
             }
             catch (Exception ex)

@@ -5,6 +5,6 @@ namespace upload_download.Services
 {
     public interface IEmailService
     {
-        Task<bool> SendEmail(SendEmailModel request);
+        Task<bool> ConfirmEmail(string token, string email);
     }
 }

@@ -4,7 +4,7 @@ namespace upload_download.Services
 {
     public interface IAuthService
     {
-        bool SignUp(SignUpModel request);
-        string SignIn(UserPasswordModel request);
+        Task<bool> SignUp(EmailPasswordModel request);
+        Task<string> SignIn(EmailPasswordModel request);
     }
 }

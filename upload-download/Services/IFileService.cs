@@ -5,7 +5,7 @@ namespace upload_download.Services
 {
     public interface IFileService
     {
-        List<string> GetFiles();
+        Task<List<string>> GetFiles();
         Task<UploadResponse> UploadFile(IFormFile file);
     }
 }

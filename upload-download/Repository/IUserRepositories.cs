@@ -8,7 +8,9 @@ namespace upload_download.Repository
 {
     public interface IUserRepositories
     {
-        UserModel GetUserByUsername(string username);
-        void AddUser(UserModel user);
+        Task<UserModel> GetUserByEmail(string email);
+        Task<UserModel> GetUserByTokenAndEmail(string token, string email);
+        Task ActiveUser(string email);
+        Task AddUser(UserModel user);
     }
 }

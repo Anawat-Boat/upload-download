@@ -8,9 +8,14 @@ using upload_download.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+//Services
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IFileService, FileService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
+
+//Repositories
 builder.Services.AddScoped<IUserRepositories, UserRepositories>();
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.Configure<FormOptions>(options =>

@@ -1,3 +1,4 @@
+using System.Web;
 using Microsoft.AspNetCore.Mvc;
 using upload_download.Models;
 using upload_download.Services;
@@ -13,12 +14,16 @@ namespace upload_download.Controllers
         {
             _emailService = emailService;
         }
-        [HttpPost("send-email")]
-        public async Task<IActionResult> SendEmail([FromBody] SendEmailModel request)
+
+        [HttpGet("confirm-email")]
+        public async Task<IActionResult> ConfirmEmail([FromQuery] string token, [FromQuery] string email)
         {
             try
             {
-                bool result = await _emailService.SendEmail(request);
+                // Decode the token and email if necessary
+                var decodedToken = HttpUtility.UrlDecode(token);
+                var decodedEmail = HttpUtility.UrlDecode(email);
+                bool result = await _emailService.ConfirmEmail(decodedToken, decodedEmail);
                 return Ok(result);
             }
             catch (Exception ex)

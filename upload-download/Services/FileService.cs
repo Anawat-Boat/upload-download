@@ -1,23 +1,18 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Caching.Memory;
-using upload_download.Extensions;
-using upload_download.Models;
+﻿using upload_download.Models;
 
 namespace upload_download.Services
 {
     public class FileService : IFileService
     {
         private readonly string _storagePath = Path.Combine(Directory.GetCurrentDirectory(), "UploadedFiles");
-        private readonly IMemoryCache _cache;
-        public FileService(IMemoryCache cache)
+        public FileService()
         {
-            _cache = cache;
             if (!Directory.Exists(_storagePath))
             {
                 Directory.CreateDirectory(_storagePath);
             }
         }
-        public List<string> GetFiles()
+        public async Task<List<string>> GetFiles()
         {
             try
             {

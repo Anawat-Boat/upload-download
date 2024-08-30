@@ -76,3 +76,4 @@ C:/Users/anawa/Documents/GitHub/upload-download/upload-download/obj/Debug/net8.0
 /Users/anawatmonprachak/Documents/GitHub/upload-download/upload-download/obj/Debug/net8.0/upload-download.pdb
 /Users/anawatmonprachak/Documents/GitHub/upload-download/upload-download/obj/Debug/net8.0/upload-download.genruntimeconfig.cache
 /Users/anawatmonprachak/Documents/GitHub/upload-download/upload-download/obj/Debug/net8.0/ref/upload-download.dll
+/Users/anawatmonprachak/Documents/GitHub/upload-download/upload-download/bin/Debug/net8.0/users.json
